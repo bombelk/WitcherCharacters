@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,6 +16,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -22,6 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -66,7 +69,10 @@ fun CharacterCard(
     character: Character,
     modifier: Modifier = Modifier
 ) {
-    Card(modifier = modifier) {
+    Card(
+        modifier = modifier,
+        elevation = CardDefaults.cardElevation(5.dp)
+    ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
@@ -74,24 +80,38 @@ fun CharacterCard(
         ) {
             Text(
                 text = stringResource(id = character.nameRes),
+                style = MaterialTheme.typography.headlineMedium,
                 textAlign = TextAlign.Start,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
             )
             Box(
                 Modifier
                     .size(160.dp)
-                    .padding(8.dp),
-                contentAlignment = Alignment.Center
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(MaterialTheme.colorScheme.onPrimary),
             ) {
                 Image(
                     painter = painterResource(id = character.imagerRes),
                     contentDescription = null,
+                    contentScale = ContentScale.Crop,
                 )
             }
-            Text(text = stringResource(id = R.string.ciri_description))
+            Text(
+                text = stringResource(id = R.string.ciri_description),
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier
+                    .padding(8.dp)
+)
         }
 
     }
+}
+
+@Composable
+fun WitcherTopBar(){
+
 }
 
 
@@ -99,6 +119,13 @@ fun CharacterCard(
 @Composable
 fun CharacterCardPreview() {
     WitcherCharactersTheme {
-        CharacterCard(character = CharactersRepositories.characters[0])
+        CharactersApp()
+    }
+}
+@Preview(showBackground = true)
+@Composable
+fun CharacterCardDarkPreview() {
+    WitcherCharactersTheme(darkTheme = true) {
+        CharactersApp()
     }
 }
