@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TheWitcherCharacters</string>
+    <string name="ciri_name">Ciri</string>
+    <string name="ciri_description">Cirilla Fiona Elen Riannon, zdrobniale Ciri – księżniczka Cintry,
+        nosicielka genu Starszej Krwi, wiedźminka Cechu Wilka, swego czasu czarodziejka,
+        później bandytka i opcjonalnie (zależnie od wyborów gracza) cesarzowa Nilfgaardu. Obiekt zainteresowania czołowych sił Kontynentu.</string>
+    <string name="geralt_name">Geralt z Rivi</string>
+    <string name="geralt_description">Geralt z Rivii herbu Most, zwany Białym Wilkiem lub Rzeźnikiem z Blaviken – wiedźmin Cechu Wilka,
+        pasowany na lyrijskiego rycerza, ochroniarz i zausznik temerskiego króla Foltesta, właściciel winnicy Corvo Bianco,
+        pięściarz i mistrz gwinta oraz kościanego pokera. Jedna z centralnych postaci historii XIII wieku oraz bohater niezliczonych legend.
+    </string>
+    <string name="vilgefortz_name">Vilgefortz z Roggeveen</string>
+    <string name="vilgefortz_description">Vilgefortz z Roggeveen – potężny czarodziej, przywódca magów w II bitwie o Sodden w 1263 roku,
+        później członek Kapituły Czarodziejów.</string>
+    <string name="radowid_name">Radowid V Srogi</string>
+    <string name="radowid_description">Radowid V Srogi, zwany również Redańskim – syn redańskiego króla Vizimira II Sprawiedliwego
+        oraz Hedwig z Malleore, młodszy brat Dalimiry i Mileny, królewicz, a potem król Redanii z dynastii redańskiej.
+        Za jego panowania kraj ten osiągnął szczyt swej potęgi.</string>
+</resources>
